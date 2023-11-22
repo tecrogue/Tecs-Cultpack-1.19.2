@@ -1,0 +1,133 @@
+name: Release
+run-name: "Release #${{ github.run_number }}"
+
+on:
+  workflow_call:
+    inputs:
+      projectname:
+        required: true
+        type: string
+      projectsuffix:
+        required: true
+        type: string
+      mcversion:
+        required: true
+        type: string
+      tag:
+        required: true
+        type: string
+
+env:
+  PROJECT_ID: "123456"
+
+jobs:
+  release-github:
+    name: Deploy to GitHub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download modpack
+        uses: actions/download-artifact@v3
+        with:
+          name: modpack
+      - name: Download serverpack
+        uses: actions/download-artifact@v3
+        with:
+          name: serverpack
+      - name: Download changelog
+        uses: actions/download-artifact@v3
+        with:
+          name: changelog
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: CHANGELOG-${{ inputs.projectsuffix }}.md
+          files: |
+            ${{ inputs.projectname }}-${{ inputs.projectsuffix }}.zip
+            ${{ inputs.projectname }}-${{ inputs.projectsuffix }}-Server-Pack.zip
+          tag_name: ${{ inputs.tag }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  release-curseforge:
+    name: Deploy to CurseForge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if CF_API_TOKEN exist
+        shell: bash
+        run: |
+          if [ "${{ secrets.CF_API_TOKEN }}" == '' ]; then
+            echo '::error::No value found for secret key `CF_API_TOKEN`. See https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository' && exit 1
+          fi
+      - name: Download modpack
+        uses: actions/download-artifact@v3
+        with:
+          name: modpack
+      - name: Download serverpack
+        uses: actions/download-artifact@v3
+        with:
+          name: serverpack
+      - name: Get release type
+        id: release-type
+        run: |
+          rel_type="release"
+          case "${{ inputs.tag }}" in
+            *alpha*) rel_type="alpha" ;;
+            *beta*) rel_type="beta" ;;
+            *) rel_type="release" ;;
+          esac
+          echo "type=$rel_type" >> $GITHUB_OUTPUT
+      - name: Create release
+        uses: juraj-hrivnak/upload-curseforge-modpack-action@v2.0.0
+        with:
+          api-token: ${{ secrets.CF_API_TOKEN }}
+          project-id: ${{ env.PROJECT_ID }}
+          modpack-path: ${{ inputs.projectname }}-${{ inputs.projectsuffix }}.zip
+          display-name: ${{ inputs.projectname }}-${{ inputs.projectsuffix }}
+          modpack-server-path: ${{ inputs.projectname }}-${{ inputs.projectsuffix }}-Server-Pack.zip
+          server-display-name: ${{ inputs.projectname }}-${{ inputs.projectsuffix }}-Server-Pack
+          changelog: See https://github.com/juraj-hrivnak/Underdog/releases/tag/${{ inputs.tag }}
+          changelog-format: markdown
+          game-version: ${{ inputs.mcversion }}
+          release-type: ${{ steps.release-type.outputs.type }}
+
+  update-changelogs:
+    name: Update Changelogs
+    runs-on: ubuntu-latest
+    needs: [release-github, release-curseforge]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Download changelog
+        uses: actions/download-artifact@v3
+        with:
+          name: changelog
+          path: pax/changelogs
+      - name: Move changelogs
+        run: |
+          rm CHANGELOG.md
+          cp pax/changelogs/TEMPLATE.md CHANGELOG.md
+      - name: Commit changelogs
+        run: |
+          git add .
+          git config --local user.name "Juraj Hrivnak"
+          git config --local user.email "juraj-hrivnak@users.noreply.github.com"
+          git commit -m "Automatically update changelogs" -a
+      - name: Push changelogs
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+
+  close-fixed-issues:
+    name: Close Fixed Issues
+    runs-on: ubuntu-latest
+    needs: [release-github, release-curseforge]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: close-fixed-in-dev
+        uses: juraj-hrivnak/close-issues-based-on-label@master
+        env:
+          LABEL: "fixed in dev"
+          VERSION: ${{ inputs.tag }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
