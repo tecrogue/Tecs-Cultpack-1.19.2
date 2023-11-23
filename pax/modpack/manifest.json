@@ -1,9 +1,9 @@
 {
   "minecraft": {
-    "version": "1.20.1",
+    "version": "1.19.2",
     "modLoaders": [
       {
-        "id": "forge-47.2.0",
+        "id": "forge-43.3.0",
         "primary": true
       }
     ]
@@ -13,6 +13,371 @@
   "manifestVersion": 1,
   "version": "1.0.0",
   "author": "Tecrogue",
-  "name": "Cultpack",
-  "files": []
+  "name": "Cultcraft 1.19",
+  "files": [
+    {
+      "projectID": 32274,
+      "fileID": 4532924,
+      "required": true,
+      "__meta": {
+        "name": "JourneyMap"
+      }
+    },
+    {
+      "projectID": 223852,
+      "fileID": 3884263,
+      "required": true,
+      "__meta": {
+        "name": "Storage Drawers"
+      }
+    },
+    {
+      "projectID": 238222,
+      "fileID": 4712866,
+      "required": true,
+      "__meta": {
+        "name": "Just Enough Items (JEI)"
+      }
+    },
+    {
+      "projectID": 240630,
+      "fileID": 4862430,
+      "required": true,
+      "__meta": {
+        "name": "Just Enough Resources (JER)"
+      }
+    },
+    {
+      "projectID": 243121,
+      "fileID": 4812006,
+      "required": true,
+      "__meta": {
+        "name": "Quark"
+      }
+    },
+    {
+      "projectID": 245506,
+      "fileID": 4883324,
+      "required": true,
+      "__meta": {
+        "name": "MineColonies",
+        "dependencies": [
+          303278,
+          522992,
+          527361,
+          298744,
+          900364
+        ]
+      }
+    },
+    {
+      "projectID": 245755,
+      "fileID": 4635420,
+      "required": true,
+      "__meta": {
+        "name": "Waystones",
+        "dependencies": [
+          531761
+        ]
+      }
+    },
+    {
+      "projectID": 250363,
+      "fileID": 4100299,
+      "required": true,
+      "__meta": {
+        "name": "AutoRegLib"
+      }
+    },
+    {
+      "projectID": 250398,
+      "fileID": 4050343,
+      "required": true,
+      "__meta": {
+        "name": "Controlling"
+      }
+    },
+    {
+      "projectID": 252818,
+      "fileID": 4777775,
+      "required": true,
+      "__meta": {
+        "name": "Dynamic Trees"
+      }
+    },
+    {
+      "projectID": 252848,
+      "fileID": 4118390,
+      "required": true,
+      "__meta": {
+        "name": "Nature's Compass"
+      }
+    },
+    {
+      "projectID": 271740,
+      "fileID": 4028343,
+      "required": true,
+      "__meta": {
+        "name": "Toast Control",
+        "dependencies": [
+          283644
+        ]
+      }
+    },
+    {
+      "projectID": 283644,
+      "fileID": 4876369,
+      "required": true,
+      "__meta": {
+        "name": "Placebo",
+        "explicit": false
+      }
+    },
+    {
+      "projectID": 289712,
+      "fileID": 4746630,
+      "required": true,
+      "__meta": {
+        "name": "Tetra",
+        "dependencies": [
+          351914
+        ]
+      }
+    },
+    {
+      "projectID": 298744,
+      "fileID": 4811512,
+      "required": true,
+      "__meta": {
+        "name": "Structurize",
+        "explicit": false,
+        "dependencies": [
+          527361,
+          522992
+        ]
+      }
+    },
+    {
+      "projectID": 303278,
+      "fileID": 4372604,
+      "required": true,
+      "__meta": {
+        "name": "Multi-Piston",
+        "explicit": false,
+        "dependencies": [
+          522992
+        ]
+      }
+    },
+    {
+      "projectID": 324717,
+      "fileID": 4800904,
+      "required": true,
+      "__meta": {
+        "name": "Jade 🔍"
+      }
+    },
+    {
+      "projectID": 326652,
+      "fileID": 4795347,
+      "required": true,
+      "__meta": {
+        "name": "Cupboard",
+        "explicit": false
+      }
+    },
+    {
+      "projectID": 328085,
+      "fileID": 4835190,
+      "required": true,
+      "__meta": {
+        "name": "Create"
+      }
+    },
+    {
+      "projectID": 342543,
+      "fileID": 4746888,
+      "required": true,
+      "__meta": {
+        "name": "Mahou Tsukai"
+      }
+    },
+    {
+      "projectID": 351914,
+      "fileID": 3941314,
+      "required": true,
+      "__meta": {
+        "name": "mutil",
+        "explicit": false
+      }
+    },
+    {
+      "projectID": 386753,
+      "fileID": 4701336,
+      "required": true,
+      "__meta": {
+        "name": "Dynamic Trees - Quark",
+        "dependencies": [
+          243121,
+          252818
+        ]
+      }
+    },
+    {
+      "projectID": 388800,
+      "fileID": 4813951,
+      "required": true,
+      "__meta": {
+        "name": "Polymorph (Fabric/Forge/Quilt)"
+      }
+    },
+    {
+      "projectID": 457570,
+      "fileID": 4462837,
+      "required": true,
+      "__meta": {
+        "name": "Configured"
+      }
+    },
+    {
+      "projectID": 470193,
+      "fileID": 4764733,
+      "required": true,
+      "__meta": {
+        "name": "Connectivity[Forge/Fabric]",
+        "dependencies": [
+          326652
+        ]
+      }
+    },
+    {
+      "projectID": 508933,
+      "fileID": 4874148,
+      "required": true,
+      "__meta": {
+        "name": "Distant Horizons: A Level of Detail mod"
+      }
+    },
+    {
+      "projectID": 522992,
+      "fileID": 4887694,
+      "required": true,
+      "__meta": {
+        "name": "BlockUI",
+        "explicit": false
+      }
+    },
+    {
+      "projectID": 527361,
+      "fileID": 4817362,
+      "required": true,
+      "__meta": {
+        "name": "Domum Ornamentum",
+        "explicit": false
+      }
+    },
+    {
+      "projectID": 531761,
+      "fileID": 4751735,
+      "required": true,
+      "__meta": {
+        "name": "Balm (Forge Edition)",
+        "explicit": false
+      }
+    },
+    {
+      "projectID": 570017,
+      "fileID": 3949703,
+      "required": true,
+      "__meta": {
+        "name": "Radium Reforged"
+      }
+    },
+    {
+      "projectID": 582327,
+      "fileID": 4876162,
+      "required": true,
+      "__meta": {
+        "name": "Server Performance - Smooth Chunk Save[Forge/Fabric]",
+        "dependencies": [
+          326652
+        ]
+      }
+    },
+    {
+      "projectID": 583345,
+      "fileID": 4850581,
+      "required": true,
+      "__meta": {
+        "name": "Jade Addons (Forge)",
+        "dependencies": [
+          324717
+        ]
+      }
+    },
+    {
+      "projectID": 635427,
+      "fileID": 3909789,
+      "required": true,
+      "__meta": {
+        "name": "Yeetus Experimentus"
+      }
+    },
+    {
+      "projectID": 649832,
+      "fileID": 4655213,
+      "required": true,
+      "__meta": {
+        "name": "Create Ore Excavation",
+        "dependencies": [
+          328085
+        ]
+      }
+    },
+    {
+      "projectID": 688231,
+      "fileID": 4836195,
+      "required": true,
+      "__meta": {
+        "name": "Create: Steam 'n' Rails",
+        "dependencies": [
+          328085
+        ]
+      }
+    },
+    {
+      "projectID": 831663,
+      "fileID": 4765536,
+      "required": true,
+      "__meta": {
+        "name": "Chunk Sending[Forge/Fabric]",
+        "dependencies": [
+          326652
+        ]
+      }
+    },
+    {
+      "projectID": 872577,
+      "fileID": 4714432,
+      "required": true,
+      "__meta": {
+        "name": "Create Recycle Everything",
+        "dependencies": [
+          328085
+        ]
+      }
+    },
+    {
+      "projectID": 900364,
+      "fileID": 4690162,
+      "required": true,
+      "__meta": {
+        "name": "TownTalk",
+        "explicit": false,
+        "dependencies": [
+          245506
+        ]
+      }
+    }
+  ]
 }
