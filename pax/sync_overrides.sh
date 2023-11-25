@@ -29,5 +29,7 @@ sync_directory "patchouli_books"
 sync_directory "resources"
 sync_directory "scripts"
 sync_directory "structures"
+sync_directory "blueprints/Byzantine_2" #makes sure that the current version of Byzantine makes it to the pack
+sync_directory "defaultconfigs"
 
 echo "Syncing completed!"
