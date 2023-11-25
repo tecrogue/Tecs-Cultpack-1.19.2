@@ -24,6 +24,14 @@
       }
     },
     {
+      "projectID": 60089,
+      "fileID": 3871353,
+      "required": true,
+      "__meta": {
+        "name": "Mouse Tweaks"
+      }
+    },
+    {
       "projectID": 223852,
       "fileID": 3884263,
       "required": true,
@@ -45,6 +53,14 @@
       "required": true,
       "__meta": {
         "name": "Just Enough Resources (JER)"
+      }
+    },
+    {
+      "projectID": 240633,
+      "fileID": 4565642,
+      "required": true,
+      "__meta": {
+        "name": "Inventory Sorter"
       }
     },
     {
