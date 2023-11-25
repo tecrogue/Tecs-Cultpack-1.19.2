@@ -253,6 +253,14 @@
       }
     },
     {
+      "projectID": 361276,
+      "fileID": 4666932,
+      "required": true,
+      "__meta": {
+        "name": "Lootr (Forge)"
+      }
+    },
+    {
       "projectID": 378646,
       "fileID": 4649906,
       "required": true,

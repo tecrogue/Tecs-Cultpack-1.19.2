@@ -54,7 +54,7 @@
 /hei_bookmarks.ini
 /usernamecache.json
 /usercache.json
-/servers.dat
+/servers.dat*
 /patchouli_data.json
 /seen_buildersbag_addons.txt
 /pack.zip
@@ -95,3 +95,4 @@
 # other things to ignore
 /blueprints/tecrogue/*
 /modernfix/*
+/Distant_horizons_server_data
