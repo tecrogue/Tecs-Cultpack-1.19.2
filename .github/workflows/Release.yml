@@ -89,7 +89,7 @@ jobs:
           game_endpoint: minecraft
           #game_versions: ${{ inputs.mcversion }}
           #game_versions: ${{ inputs.mcversion }}
-          game_versions: "Minecraft 1.19:1.19.2,Java 17,Forge"
+          game_versions: "Minecraft 1.19:1.19.2,Forge"
           release_type: ${{ steps.release_type.outputs.type }}
       - name: Upload server pack
         uses: itsmeow/curseforge-upload@3.1.1
