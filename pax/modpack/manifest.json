@@ -125,6 +125,14 @@
       }
     },
     {
+      "projectID": 276951,
+      "fileID": 4802721,
+      "required": true,
+      "__meta": {
+        "name": "Comforts (Fabric/Forge/Quilt)"
+      }
+    },
+    {
       "projectID": 283644,
       "fileID": 4876369,
       "required": true,
@@ -203,12 +211,37 @@
       }
     },
     {
+      "projectID": 348521,
+      "fileID": 4633416,
+      "required": true,
+      "__meta": {
+        "name": "Cloth Config API (Fabric/Forge)",
+        "explicit": false
+      }
+    },
+    {
+      "projectID": 351725,
+      "fileID": 4671055,
+      "required": true,
+      "__meta": {
+        "name": "Macaw's Bridges"
+      }
+    },
+    {
       "projectID": 351914,
       "fileID": 3941314,
       "required": true,
       "__meta": {
         "name": "mutil",
         "explicit": false
+      }
+    },
+    {
+      "projectID": 378646,
+      "fileID": 4649906,
+      "required": true,
+      "__meta": {
+        "name": "Macaw's Doors"
       }
     },
     {
@@ -232,11 +265,94 @@
       }
     },
     {
+      "projectID": 400933,
+      "fileID": 4841549,
+      "required": true,
+      "__meta": {
+        "name": "Macaw's Trapdoors"
+      }
+    },
+    {
+      "projectID": 419699,
+      "fileID": 4555749,
+      "required": true,
+      "__meta": {
+        "name": "Architectury API (Fabric/Forge)",
+        "explicit": false
+      }
+    },
+    {
+      "projectID": 422301,
+      "fileID": 4882590,
+      "required": true,
+      "__meta": {
+        "name": "Sophisticated Backpacks",
+        "dependencies": [
+          618298,
+          618298,
+          618298
+        ]
+      }
+    },
+    {
+      "projectID": 429235,
+      "fileID": 4117906,
+      "required": true,
+      "__meta": {
+        "name": "FerriteCore (Forge)"
+      }
+    },
+    {
+      "projectID": 438332,
+      "fileID": 4715406,
+      "required": true,
+      "__meta": {
+        "name": "SuperMartijn642's Config Lib",
+        "explicit": false
+      }
+    },
+    {
+      "projectID": 441647,
+      "fileID": 4762544,
+      "required": true,
+      "__meta": {
+        "name": "FramedBlocks"
+      }
+    },
+    {
+      "projectID": 453925,
+      "fileID": 4204550,
+      "required": true,
+      "__meta": {
+        "name": "Macaw's Fences and Walls"
+      }
+    },
+    {
+      "projectID": 454372,
+      "fileID": 4788137,
+      "required": true,
+      "__meta": {
+        "name": "SuperMartijn642's Core Lib",
+        "explicit": false
+      }
+    },
+    {
       "projectID": 457570,
       "fileID": 4462837,
       "required": true,
       "__meta": {
         "name": "Configured"
+      }
+    },
+    {
+      "projectID": 466792,
+      "fileID": 4703283,
+      "required": true,
+      "__meta": {
+        "name": "Create Stuff & Additions",
+        "dependencies": [
+          328085
+        ]
       }
     },
     {
@@ -247,6 +363,18 @@
         "name": "Connectivity[Forge/Fabric]",
         "dependencies": [
           326652
+        ]
+      }
+    },
+    {
+      "projectID": 494206,
+      "fileID": 4606118,
+      "required": true,
+      "__meta": {
+        "name": "Create Chunkloading",
+        "dependencies": [
+          348521,
+          419699
         ]
       }
     },
@@ -286,6 +414,28 @@
       }
     },
     {
+      "projectID": 549394,
+      "fileID": 4606519,
+      "required": true,
+      "__meta": {
+        "name": "Krypton Reforged"
+      }
+    },
+    {
+      "projectID": 558998,
+      "fileID": 4872816,
+      "required": true,
+      "__meta": {
+        "name": "Rechiseled",
+        "explicit": false,
+        "dependencies": [
+          454372,
+          854949,
+          438332
+        ]
+      }
+    },
+    {
       "projectID": 570017,
       "fileID": 3949703,
       "required": true,
@@ -313,6 +463,15 @@
         "dependencies": [
           324717
         ]
+      }
+    },
+    {
+      "projectID": 618298,
+      "fileID": 4882573,
+      "required": true,
+      "__meta": {
+        "name": "Sophisticated Core",
+        "explicit": false
       }
     },
     {
@@ -346,6 +505,14 @@
       }
     },
     {
+      "projectID": 790626,
+      "fileID": 4862994,
+      "required": true,
+      "__meta": {
+        "name": "ModernFix"
+      }
+    },
+    {
       "projectID": 831663,
       "fileID": 4765536,
       "required": true,
@@ -357,6 +524,23 @@
       }
     },
     {
+      "projectID": 854949,
+      "fileID": 4880271,
+      "required": true,
+      "__meta": {
+        "name": "Fusion (Connected Textures)",
+        "explicit": false
+      }
+    },
+    {
+      "projectID": 865273,
+      "fileID": 4707966,
+      "required": true,
+      "__meta": {
+        "name": "Stellar View"
+      }
+    },
+    {
       "projectID": 872577,
       "fileID": 4714432,
       "required": true,
@@ -364,6 +548,18 @@
         "name": "Create Recycle Everything",
         "dependencies": [
           328085
+        ]
+      }
+    },
+    {
+      "projectID": 888624,
+      "fileID": 4789551,
+      "required": true,
+      "__meta": {
+        "name": "Rechiseled: Create",
+        "dependencies": [
+          328085,
+          558998
         ]
       }
     },
