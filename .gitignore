@@ -92,3 +92,6 @@
 /pax/serverpack/logs/*
 /pax/serverpack/ServerPackCreator-*.jar
 
+# other things to ignore
+/blueprints/tecrogue/*
+/modernfix/*
