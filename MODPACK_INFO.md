@@ -9,7 +9,7 @@ Minecraft Version: `1.19.2`
 
 Mod Loader: `forge-43.3.0`
 
-Mod Count: `62`
+Mod Count: `63`
 
 ## Errors
 

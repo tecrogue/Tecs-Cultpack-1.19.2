@@ -40,3 +40,4 @@ This template uses various tools to help you with your modpack development and r
 [GitHub Actions]: .github/workflows
 ["Use this template"]: https://github.com/juraj-hrivnak/.minecraft/generate
 [Create a new Secret for GitHub Actions]: https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository
+java -jar ModpackDownloader-<version>.jar modpack ..
