@@ -1,6 +1,6 @@
 # .minecraft
 
-[![Build](https://github.com/juraj-hrivnak/.minecraft/actions/workflows/Build.yml/badge.svg)](https://github.com/juraj-hrivnak/.minecraft/actions/workflows/Build.yml)
+[![Build](https://github.com/tecrogue/Tecs-Cultpack-1.19.2/actions/workflows/Build.yml/badge.svg)](https://github.com/tecrogue/Tecs-Cultpack-1.19.2/actions/workflows/Build.yml)
 
 Repository template based off of juraj-hrivnak's [.minecraft template](https://github.com/juraj-hrivnak/.minecraft)
 An easy-to-use template for an automated modpack development environment.

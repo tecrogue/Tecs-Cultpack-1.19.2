@@ -63,6 +63,7 @@
 /options.txt
 /optionsshaders.txt
 /mountains.txt
+/config/jei/world/*
 
 # Pax
 /pax/.out/*
