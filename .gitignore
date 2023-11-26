@@ -91,6 +91,12 @@
 /pax/serverpack/server-packs/*
 /pax/serverpack/logs/*
 /pax/serverpack/ServerPackCreator-*.jar
+/pax/serverpack/help.md
+/pax/serverpack/changelog.md
+/pax/serverpack/lang/*
+/pax/serverpack/LICENSE
+/pax/serverpack/manifests/*
+pax/serverpack/server-packs_server_pack.zip
 
 # other things to ignore
 /blueprints/tecrogue/*
